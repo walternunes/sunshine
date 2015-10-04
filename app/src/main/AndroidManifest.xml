@@ -3,6 +3,7 @@
     package="jnuneslab.com.sunshine" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -33,6 +34,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="jnuneslab.com.sunshine.MainActivity" />
         </activity>
+        <provider
+            android:authorities="jnuneslab.com.sunshine"
+            android:name=".data.WeatherProvider" />
     </application>
 
 </manifest>
