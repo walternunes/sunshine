@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -82,7 +83,7 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     }
 
 
-   @Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -94,7 +95,7 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
         }
         return super.onOptionsItemSelected(item);
 
-   }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -130,10 +131,14 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     }
 
     @Override
-         public void onActivityCreated(Bundle savedInstanceState) {
-                 getLoaderManager().initLoader(FORECAST_LOADER, null, this);
-                 super.onActivityCreated(savedInstanceState);
-             }
+    public void onActivityCreated(Bundle savedInstanceState) {
+        getLoaderManager().initLoader(FORECAST_LOADER, null, this);
+        // Check if there is any Location set and update weather in if not (this will only be called one time)
+        if (Utility.isPreferredEmpty(getActivity())) {
+            updateWeather();
+        }
+        super.onActivityCreated(savedInstanceState);
+    }
 
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
