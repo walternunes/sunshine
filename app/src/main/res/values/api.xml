@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- This field is the api key of my user jnunes and should NOT be versioned in GIT -->
+    <string name="api_key" translatable="false">3b8bc58c5f117d0e7ee691dfadfafce0</string>
+</resources>
