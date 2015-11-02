@@ -26,7 +26,7 @@ public class TestFetchWeatherTask extends AndroidTestCase{
     static final double ADD_LOCATION_LAT = 34.425833;
     static final double ADD_LOCATION_LON = -119.714167;
 
-
+/*
     public void testAddLocation() {
          // start from a clean state
         getContext().getContentResolver().delete(WeatherContract.LocationEntry.CONTENT_URI,
@@ -92,5 +92,5 @@ public class TestFetchWeatherTask extends AndroidTestCase{
        getContext().getContentResolver().
                acquireContentProviderClient(WeatherContract.LocationEntry.CONTENT_URI).
                 getLocalContentProvider().shutdown();
-    }
+    }*/
 }

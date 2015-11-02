@@ -27,26 +27,17 @@ import android.util.Log;
  */
 public class WeatherContract {
 
-    // The "Content authority" is a name for the entire content provider, similar to the
-    // relationship between a domain name and its website.  A convenient string to use for the
-    // content authority is the package name for the app, which is guaranteed to be unique on the
-    // device.
+    // Name of the content provider
     public static final String CONTENT_AUTHORITY = "jnuneslab.com.sunshine";
 
-    // Use CONTENT_AUTHORITY to create the base of all URI's which apps will use to contact
-    // the content provider.
+    // Base URI
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
 
     // Possible paths (appended to base content URI for possible URI's)
-    // For instance, content://jnuneslab.com.sunshine/weather/ is a valid path for
-    // looking at weather data. content://jnuneslab.com.sunshine/givemeroot/ will fail,
-    // as the ContentProvider hasn't been given any information on what to do with "givemeroot".
-
     public static final String PATH_WEATHER = "weather";
     public static final String PATH_LOCATION = "location";
 
-    // To make it easy to query for the exact date, we normalize all dates that go into
-    // the database to the start of the the Julian day at UTC.
+    // Normalize Date using Julian Date to insert into database
     public static long normalizeDate(long startDate) {
         // normalize the start date to the beginning of the (UTC) day
         Time time = new Time();
@@ -98,6 +89,9 @@ public class WeatherContract {
                 ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_WEATHER;
 
 
+        /*
+            Support functions to help building the URI
+         */
         public static Uri buildWeatherUri(long id) {
             return ContentUris.withAppendedId(CONTENT_URI, id);
         }
