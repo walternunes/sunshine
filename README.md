@@ -2,7 +2,7 @@
 
 Sunshine is a weather forecast application for Android that uses the OpenWeather API. This application is part of the Udacity Android developer nanodegree.
 
-The application of this repository is a litle different from the original because I made some changes and improvements.
+The application is different from the original because I made some changes and improvements.
 
 You can find more information about OpenWeather API in the bellow link.
 API: http://openweathermap.org/api
