@@ -1,4 +1,4 @@
-package jnuneslab.com.sunshine;
+package jnuneslab.com.sunshine.ui.adapter;
 
 /**
  * Created by Walter on 02/10/2015.
@@ -12,6 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import jnuneslab.com.sunshine.ui.fragment.ForecastFragment;
+import jnuneslab.com.sunshine.R;
+import jnuneslab.com.sunshine.util.Utility;
 
 
 /**

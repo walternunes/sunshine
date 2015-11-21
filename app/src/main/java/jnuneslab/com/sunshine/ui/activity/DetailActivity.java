@@ -1,10 +1,13 @@
-package jnuneslab.com.sunshine;
+package jnuneslab.com.sunshine.ui.activity;
 
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import jnuneslab.com.sunshine.ui.fragment.DetailFragment;
+import jnuneslab.com.sunshine.R;
 
 public class DetailActivity extends ActionBarActivity {
 

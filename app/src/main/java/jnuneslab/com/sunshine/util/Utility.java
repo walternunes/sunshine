@@ -1,14 +1,15 @@
-package jnuneslab.com.sunshine;
+package jnuneslab.com.sunshine.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.format.Time;
-import android.util.Log;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import jnuneslab.com.sunshine.R;
 
 /**
  * Created by Walter on 02/10/2015.

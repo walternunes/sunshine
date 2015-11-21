@@ -28,9 +28,9 @@ import android.support.v4.app.TaskStackBuilder;
 import android.text.format.Time;
 import android.util.Log;
 
-import jnuneslab.com.sunshine.MainActivity;
+import jnuneslab.com.sunshine.ui.activity.MainActivity;
 import jnuneslab.com.sunshine.R;
-import jnuneslab.com.sunshine.Utility;
+import jnuneslab.com.sunshine.util.Utility;
 import jnuneslab.com.sunshine.data.WeatherContract;
 
 import org.json.JSONArray;

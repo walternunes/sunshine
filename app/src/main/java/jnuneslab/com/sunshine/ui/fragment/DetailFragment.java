@@ -1,4 +1,4 @@
-package jnuneslab.com.sunshine;
+package jnuneslab.com.sunshine.ui.fragment;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -20,6 +20,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import jnuneslab.com.sunshine.R;
+import jnuneslab.com.sunshine.util.Utility;
 import jnuneslab.com.sunshine.data.WeatherContract.WeatherEntry;
 import jnuneslab.com.sunshine.data.WeatherContract;
 
@@ -30,7 +32,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
 
     private static final String LOG_TAG = DetailFragment.class.getSimpleName();
 
-    static final String DETAIL_URI = "URI";
+    public static final String DETAIL_URI = "URI";
 
     private static final String FORECAST_SHARE_HASHTAG = " #SunshineApp";
 
@@ -82,7 +84,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
         setHasOptionsMenu(true);
     }
 
-    void onLocationChanged(String newLocation) {
+    public void onLocationChanged(String newLocation) {
         // replace the uri, since the location has changed
         Uri uri = mUri;
         if (null != uri) {

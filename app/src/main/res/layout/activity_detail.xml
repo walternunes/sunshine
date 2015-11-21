@@ -3,5 +3,5 @@
     android:id="@+id/weather_detail_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="jnuneslab.com.sunshine.DetailActivity"
+    tools:context="jnuneslab.com.sunshine.ui.activity.DetailActivity"
     tools:ignore="MergeRootFrame" />

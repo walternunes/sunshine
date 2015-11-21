@@ -1,15 +1,17 @@
-package jnuneslab.com.sunshine;
+package jnuneslab.com.sunshine.ui.activity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import android.support.v7.app.ActionBarActivity;
+
+import jnuneslab.com.sunshine.ui.fragment.DetailFragment;
+import jnuneslab.com.sunshine.ui.fragment.ForecastFragment;
+import jnuneslab.com.sunshine.R;
+import jnuneslab.com.sunshine.util.Utility;
 
 
 public class MainActivity extends ActionBarActivity implements ForecastFragment.Callback {

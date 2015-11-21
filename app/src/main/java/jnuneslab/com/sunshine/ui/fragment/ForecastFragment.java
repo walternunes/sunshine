@@ -1,10 +1,6 @@
-package jnuneslab.com.sunshine;
+package jnuneslab.com.sunshine.ui.fragment;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
-import android.nfc.Tag;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -22,8 +18,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 
+import jnuneslab.com.sunshine.R;
+import jnuneslab.com.sunshine.util.Utility;
 import jnuneslab.com.sunshine.data.WeatherContract;
 import jnuneslab.com.sunshine.sync.SunshineSyncAdapter;
+import jnuneslab.com.sunshine.ui.adapter.ForecastAdapter;
 
 /**
  * Created by Walter on 06/09/2015.
@@ -51,15 +50,15 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     };
 
     // Mapping colluns
-    static final int COL_WEATHER_ID = 0;
-    static final int COL_WEATHER_DATE = 1;
-    static final int COL_WEATHER_DESC = 2;
-    static final int COL_WEATHER_MAX_TEMP = 3;
-    static final int COL_WEATHER_MIN_TEMP = 4;
-    static final int COL_LOCATION_SETTING = 5;
-    static final int COL_WEATHER_CONDITION_ID = 6;
-    static final int COL_COORD_LAT = 7;
-    static final int COL_COORD_LONG = 8;
+    public static final int COL_WEATHER_ID = 0;
+    public static final int COL_WEATHER_DATE = 1;
+    public static final int COL_WEATHER_DESC = 2;
+    public static final int COL_WEATHER_MAX_TEMP = 3;
+    public static final int COL_WEATHER_MIN_TEMP = 4;
+    public static final int COL_LOCATION_SETTING = 5;
+    public static final int COL_WEATHER_CONDITION_ID = 6;
+    public static final int COL_COORD_LAT = 7;
+    public static final int COL_COORD_LONG = 8;
     private ForecastAdapter mForecastAdapter;
 
     private ListView mListView;
@@ -91,7 +90,7 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     }
 
     // since we read the location when we create the loader, all we need to do is restart things
-    void onLocationChanged() {
+    public void onLocationChanged() {
         updateWeather();
         getLoaderManager().restartLoader(FORECAST_LOADER, null, this);
     }
