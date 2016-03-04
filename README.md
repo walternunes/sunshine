@@ -25,7 +25,7 @@ Next you will need to add a String named "api_key" into your resources file that
 # **Screens** #
 ## Portrait Layout: ##
 
-![s5.png](https://bitbucket.org/repo/k6neKa/images/1640802019-s5.png)
+![s8.png](https://bitbucket.org/repo/k6neKa/images/3044334187-s8.png)
 
 ## Tablet landscape layout: ##
 
